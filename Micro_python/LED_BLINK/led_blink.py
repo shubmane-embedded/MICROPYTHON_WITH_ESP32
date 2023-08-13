@@ -13,7 +13,7 @@
 from machine import Pin
 from time import sleep
 
-print("----First ESP32 WROOM 32 with Micropython----")
+print("----First ESP32 WROOM 32 with Micropython----\n")
 print("----LED Blink on GPIO 2 on ESP32 WROOM 32----\n")
 print("------------Blinking LED  7 times------------\n")
 
