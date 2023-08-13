@@ -1,0 +1,36 @@
+Note - Assume that u have latest python version and latest pip version
+
+1. python --version = 3.11.4
+2. pip --version = pip 23.0.1 from /usr/lib/python3/dist-packages/pip (python 3.11)
+3. pipx --version = 1.1.0
+
+For micro-python on ESP32, Need to clone the below Git Repository.
+
+Step 1 - git clone git@github.com:espressif/esptool.git
+
+Step 2 - need to install below packages - 
+	 
+	 a. sudo apt install python3-pip
+	 b. sudo apt install pipx
+	 c. pipx install pyinstaller (.py ====> .bin)
+	 d. pipx install adafruit-ampy
+
+Step 3 - Install the esptool
+	 
+	 a. pipx install esptool
+	 
+Step 4 - Erase the firmware on ESP32
+	 Note - go the directory where you clone the project
+	 
+	 a. python esptool.py erase_flash
+	 
+Step 5 - Flash micro-python firmware on ESP32
+
+         a. python esptool.py --chip esp32 --port /dev/ttyUSB0 write_flash -z 0x1000 esp32-20230426-v1.20.0.bin
+         
+Step 6 - Flashing python file on ESP32
+
+	 a. ampy --port /dev/ttyUSB0 put led_blink.py
+	 b. ampy --port /dev/ttyUSB0 run led_blink.py
+	 
+Note - Completed.
