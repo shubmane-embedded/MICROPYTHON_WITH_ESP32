@@ -14,7 +14,7 @@ import machine
 from machine import Pin
 from time import sleep
 
-
+# Demonstration of Deep Sleep mode
 print("----Demonstration of Deep Sleep mode----\n")
 
 # Configure the GPIO 2 as Output
