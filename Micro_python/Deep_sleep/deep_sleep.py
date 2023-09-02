@@ -33,4 +33,6 @@ print("Entering into deep sleep")
 machine.deepsleep(10000)
 print("done")
 
+exit(0)
+
 # End of script
