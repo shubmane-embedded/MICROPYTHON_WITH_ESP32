@@ -14,11 +14,13 @@ import machine
 from machine import Pin
 from time import sleep
 
+
 print("----Demonstration of Deep Sleep mode----\n")
 
 # Configure the GPIO 2 as Output
 led_pin = Pin(2, Pin.OUT)
 
+# Function definition ==> led_blink
 def led_blink():
     for i in range(5):
         led_pin(1)
