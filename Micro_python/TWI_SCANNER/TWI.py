@@ -12,11 +12,14 @@
 
 from machine import Pin, SoftI2C
 
+# SCL & SDA Pin Selection
 SCL_PIN = Pin(23)
 SDA_PIN = Pin(22)
 
+# I2C Configuration
 i2c = SoftI2C(scl = SCL_PIN, sda = SDA_PIN , freq = 10000)
 
+# I2C Scanning
 i2c_devices = i2c.scan()
 
 if len(i2c_devices) == 0:
@@ -25,5 +28,7 @@ else:
     print("i2c devices found : {0}".format(len(i2c_devices)))
     for device in i2c_devices:
         print("Device_address = {0}".format(hex(device)))
+
+exit(0)
 
 # End of script
