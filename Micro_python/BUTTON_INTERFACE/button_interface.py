@@ -40,7 +40,7 @@ while True:
         LED_STATUS = 1 # LED is in ON state
         sleep(0.5)
 
-    # Checking for the LED Status and button status ==> LED will be turn ON
+    # Checking for the LED Status and button status ==> LED will be turn OFF
     if LED_STATUS == 1 and BUTTON.value() == 0:
         print("LED OFF!!!")
         LED.value(0)
