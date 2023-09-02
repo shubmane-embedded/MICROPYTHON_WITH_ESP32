@@ -23,13 +23,12 @@ uart_2 = UART(2, 115200)
 uart_2_init = uart_2.init(115200, bits=8, parity=None, stop=1)
 print(uart_2) # print configuration
 
-# Instruction
+# Instruction for UART 2
 print("Press 'x' to turn LED ON & 'y' for to turn LED OFF on UART2")
 
 # UART2 variable
 rx_char = b''
 
-# Infinite while loop
 while True:
     if uart_2.any() > 0:
         rx_char = uart_2.readline()
@@ -45,5 +44,7 @@ while True:
             print("LED OFF!!!\n")
         else:
             uart_2.write('Please Enter the valid character')
+
+exit(0)
             
 # End of script
