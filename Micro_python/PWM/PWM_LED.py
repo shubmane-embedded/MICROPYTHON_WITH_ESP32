@@ -37,5 +37,7 @@ while True:
         
     print("Count = {0}\n".format(count))
     count = count + 1
+
+exit(0)
           
 # End of script
