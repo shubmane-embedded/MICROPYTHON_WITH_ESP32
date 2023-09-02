@@ -16,6 +16,7 @@ from time import sleep
 
 print("----Demonstration of Deep Sleep mode----\n")
 
+# Configure the GPIO 2 as Output
 led_pin = Pin(2, Pin.OUT)
 
 def led_blink():
@@ -27,8 +28,10 @@ def led_blink():
         print("LED OFF")
         sleep(1)
 
+# led blink function call
 led_blink()
 
+# Entering into deep sleep for 10 seconds
 print("Entering into deep sleep")
 machine.deepsleep(10000)
 print("done")
